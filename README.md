@@ -1,6 +1,6 @@
 # SeeStocks MCP Server
 
-Search products sold by Spanish online shops, compare their prices in every shop (shipping included) and check their real price history, directly from your AI assistant.
+Find where to buy a product in Spanish online shops, compare its price in every shop (shipping included) and check its real price history, directly from your AI assistant.
 
 [SeeStocks](https://es.seestocks.com) is a price comparison site and Google CSS partner for Spanish online shops. Its remote MCP server is **public, read-only and needs no account or API key**.
 
@@ -16,6 +16,7 @@ Listed in the [official MCP Registry](https://registry.modelcontextprotocol.io/v
 
 | Tool | What it does |
 |---|---|
+| `comparar_precios` | For a product the user has already chosen: pass brand + model or its EAN barcode (up to 5 products per call) and get every shop that sells it, cheapest first, with shipping, total, link and 90-day price history. If SeeStocks does not have it, it says so instead of suggesting other products. |
 | `buscar_productos` | Search products by text, EAN barcode or shop reference, with optional brand, shop and price filters. Returns only relevant results, best match first, each with price, shipping, shop, number of shops and a link. |
 | `ficha_producto` | Every shop that sells a product, sorted by price, with shipping and total, plus the history of its lowest price: 90-day minimum and maximum, whether today is the 90-day low, last change and recent prices. |
 | `ofertas_marca` | Recent real price drops and discounted products of a brand, plus the brand's price statistics. |
@@ -70,6 +71,7 @@ Any MCP client that supports the Streamable HTTP transport can connect to `https
 
 ## Example prompts
 
+- "Compara precios de la freidora Habitex CC485D."
 - "Busca una piscina desmontable Bestway de menos de 300 €."
 - "¿Dónde está más barata la primera, contando el envío?"
 - "¿Es buen momento para comprarla o ha estado más barata?"
