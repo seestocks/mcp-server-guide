@@ -10,6 +10,8 @@ https://es.seestocks.com/mcp
 
 Transport: Streamable HTTP. Authentication: none.
 
+Listed in the [official MCP Registry](https://registry.modelcontextprotocol.io/v0.1/servers?search=com.seestocks/price-comparison) as `com.seestocks/price-comparison`.
+
 ## Tools
 
 | Tool | What it does |
@@ -17,6 +19,7 @@ Transport: Streamable HTTP. Authentication: none.
 | `buscar_productos` | Search products by text, EAN barcode or shop reference, with optional brand, shop and price filters and price sorting. Returns only relevant results, each with price, shipping, shop, number of shops and a link. |
 | `ficha_producto` | Every shop that sells a product, sorted by price, with shipping and total, plus the history of its lowest price: 90-day minimum and maximum, whether today is the 90-day low, last change and recent prices. |
 | `ofertas_marca` | Recent real price drops and discounted products of a brand, plus the brand's price statistics. |
+| `explorar_categoria` | Overview of a type of product (e.g. "freidora de aire"): number of products and shops, price range (minimum, 10th percentile, median, 90th percentile, maximum), the cheapest products, the products sold by most shops and the biggest real price drops of the last 30 days. Optional price and brand filters. |
 
 The tools chain through the product `id` returned by `buscar_productos`.
 
@@ -71,6 +74,7 @@ Any MCP client that supports the Streamable HTTP transport can connect to `https
 - "¿Dónde está más barata la primera, contando el envío?"
 - "¿Es buen momento para comprarla o ha estado más barata?"
 - "¿Qué ofertas hay ahora de Bosch?"
+- "¿Cuánto cuesta una freidora de aire y cuáles son las más baratas?"
 
 Queries work best in Spanish, the language of the shops.
 
@@ -94,6 +98,7 @@ The same data is available as JSON, documented in [llms.txt](https://es.seestock
 - `GET https://es.seestocks.com/api/buscar?q=…`
 - `GET https://es.seestocks.com/api/producto/{id}`
 - `GET https://es.seestocks.com/api/marca/{marca}/ofertas`
+- `GET https://es.seestocks.com/api/categoria/{id}/ofertas`
 
 ## Privacy
 
