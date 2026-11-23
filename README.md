@@ -16,10 +16,10 @@ Listed in the [official MCP Registry](https://registry.modelcontextprotocol.io/v
 
 | Tool | What it does |
 |---|---|
-| `buscar_productos` | Search products by text, EAN barcode or shop reference, with optional brand, shop and price filters and price sorting. Returns only relevant results, each with price, shipping, shop, number of shops and a link. |
+| `buscar_productos` | Search products by text, EAN barcode or shop reference, with optional brand, shop and price filters. Returns only relevant results, best match first, each with price, shipping, shop, number of shops and a link. |
 | `ficha_producto` | Every shop that sells a product, sorted by price, with shipping and total, plus the history of its lowest price: 90-day minimum and maximum, whether today is the 90-day low, last change and recent prices. |
 | `ofertas_marca` | Recent real price drops and discounted products of a brand, plus the brand's price statistics. |
-| `explorar_categoria` | Overview of a type of product (e.g. "freidora de aire"): number of products and shops, price range (minimum, 10th percentile, median, 90th percentile, maximum), the cheapest products, the products sold by most shops and the biggest real price drops of the last 30 days. Optional price and brand filters. |
+| `explorar_categoria` | Overview of a type of product (e.g. "freidora de aire"): number of products and shops, price range (minimum, 10th percentile, median, 90th percentile, maximum), the cheapest products, the products sold by most shops and the biggest real price drops of the last 30 days, leaving out spare parts and accessories. Use it to find the cheapest products of a type. Optional price and brand filters. |
 
 The tools chain through the product `id` returned by `buscar_productos`.
 
